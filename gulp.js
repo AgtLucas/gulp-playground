@@ -26,3 +26,15 @@ gulp.task('compass', function() {
       }))
       .pipe(gulp.dest('./assets/css'));
 });
+
+// Concatenate and Minify JS
+gulp.task('scripts', function() {
+  gulp.src('./assets/js/*.js')
+      .pipe(concat('all.js'))
+      .pipe(gulp.dest('./dist'))
+      .pipe(rename('all.min.js'))
+      .pipe(uglify())
+      .pipe(gulp.dest('./dist'));
+});
+
+// Default Task
