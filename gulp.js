@@ -13,9 +13,16 @@ var rename = require('gulp-rename');
 // Tasks
 // Lint
 gulp.task('lint', function() {
-  gulp.src('./js/*.js')
+  gulp.src('./assets/js/*.js')
       .pipe(jshint())
       .pipe(jshint.reporter('default'));
 });
 
 // Compass
+gulp.task('compass', function() {
+  gulp.src('./assets/scss/*.scss')
+      .pipe(compass({
+        config_file: './config.rb'
+      }))
+      .pipe(gulp.dest('./assets/css'));
+});
