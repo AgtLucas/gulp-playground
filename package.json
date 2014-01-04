@@ -1,0 +1,10 @@
+{
+  "name": "gulp-playground",
+  "version": "0.0.1",
+  "description": "Playing with Gulp",
+  "author": "Lucas | AgtLucas",
+  "url": "http://agtlucas.com",
+  "dependencies": {
+
+  }
+}
