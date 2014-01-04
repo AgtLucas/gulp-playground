@@ -4,7 +4,8 @@
   "description": "Playing with Gulp",
   "author": "Lucas | AgtLucas",
   "url": "http://agtlucas.com",
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
 
   }
 }
