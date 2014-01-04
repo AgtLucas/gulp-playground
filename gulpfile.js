@@ -42,7 +42,7 @@ gulp.task('default', function() {
   gulp.run('lint', 'compass', 'scripts');
 
   // Watch the files
-  gulp.watch(['./assets/js/*.js', '.assets/scss/**/*.scss'], function() {
+  gulp.watch(['./assets/js/*.js', './assets/scss/**/*.scss'], function() {
     gulp.run('lint', 'compass', 'scripts');
   });
 });
