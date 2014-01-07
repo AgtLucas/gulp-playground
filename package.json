@@ -13,4 +13,5 @@
     "gulp-uglify": "~0.1.0",
     "gulp-sass": "~0.2.2",
     "gulp-browserify": "~0.2.4"
+  }
 }
