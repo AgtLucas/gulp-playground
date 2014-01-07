@@ -4,8 +4,7 @@
   "description": "Playing with Gulp",
   "author": "Lucas | AgtLucas",
   "url": "http://agtlucas.com",
-  "dependencies": {},
-  "devDependencies": {
+  "dependencies": {
     "gulp": "~3.2.2",
     "gulp-rename": "~0.2.1",
     "gulp-concat": "~2.1.7",
@@ -13,6 +12,5 @@
     "gulp-compass": "~1.0.3",
     "gulp-uglify": "~0.1.0",
     "gulp-sass": "~0.2.2",
-    "gulp-livereload": "~0.1.1"
-  }
+    "gulp-browserify": "~0.2.4",
 }
