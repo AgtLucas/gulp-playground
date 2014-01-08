@@ -9,6 +9,9 @@ var compass = require('gulp-compass');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
+var lr = require('tiny-lr');
+var refresh = require('gulp-livereload');
+var server = lr();
 
 // Tasks
 // Lint
