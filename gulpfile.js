@@ -34,7 +34,8 @@ gulp.task('scripts', function() {
       .pipe(gulp.dest('./dist'))
       .pipe(rename('all.min.js'))
       .pipe(uglify())
-      .pipe(gulp.dest('./dist'));
+      .pipe(gulp.dest('./dist')
+      .pipe(refresh(server));
 });
 
 // Server
