@@ -46,7 +46,7 @@ gulp.task('livereload', function() {
 
 // Default Task
 gulp.task('default', function() {
-  gulp.run('lint', 'compass', 'scripts');
+  gulp.run('livereload', 'lint', 'compass', 'scripts');
 
   // Watch the files
   gulp.watch(['./assets/js/*.js', './assets/scss/**/*.scss'], function() {
