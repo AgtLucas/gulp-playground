@@ -24,7 +24,8 @@ gulp.task('compass', function() {
       .pipe(compass({
         config_file: './config.rb'
       }))
-      .pipe(gulp.dest('./assets/css'));
+      .pipe(gulp.dest('./assets/css'))
+      .pipe(refresh(server));
 });
 
 // Concatenate and Minify JS
