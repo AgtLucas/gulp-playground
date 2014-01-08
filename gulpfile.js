@@ -49,7 +49,11 @@ gulp.task('default', function() {
   gulp.run('livereload', 'lint', 'compass', 'scripts');
 
   // Watch the files
-  gulp.watch(['./assets/js/*.js', './assets/scss/**/*.scss'], function() {
-    gulp.run('lint', 'compass', 'scripts');
+  gulp.watch('./assets/js/*.js', function() {
+    gulp.run('scripts');
+  });
+
+  gulp.watch('./assets/scss/**/*.scss', function() {
+    gulp.run('compass');
   });
 });
