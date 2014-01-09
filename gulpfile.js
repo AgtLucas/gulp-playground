@@ -23,7 +23,7 @@ gulp.task('lint', function() {
 
 // Compass
 gulp.task('compass', function() {
-  gulp.src('./assets/scss/*.scss')
+  gulp.src('./assets/scss/style.scss')
       .pipe(compass({
         config_file: './config.rb'
       }))
