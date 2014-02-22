@@ -4,6 +4,20 @@
   "description": "Playing with Gulp",
   "author": "Lucas | AgtLucas",
   "url": "http://agtlucas.com",
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
+    "gulp-rename": "^1.1.0",
+    "tiny-lr": "0.0.5",
+    "gulp-livereload": "^1.1.1",
+    "gulp-concat": "^2.1.7",
+    "gulp-clean": "^0.2.4",
+    "gulp-ruby-sass": "^0.3.1",
+    "gulp-uglify": "^0.2.1",
+    "gulp-minify-css": "^0.3.0",
+    "gulp-autoprefixer": "0.0.6",
+    "gulp-notify": "^1.0.0-beta",
+    "gulp-cache": "^0.1.2",
+    "gulp-jshint": "^1.4.2",
+    "gulp-imagemin": "^0.1.5"
   }
 }
