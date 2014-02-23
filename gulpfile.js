@@ -8,6 +8,7 @@ var sass = require('gulp-ruby-sass');
 var autoprefixer = require('gulp-autoprefixer');
 var minifycss = require('gulp-minify-css');
 var jshint = require('gulp-jshint');
+var uglify = require('gulp-uglify');
 var imagemin = require('gulp-imagemin');
 var rename = require('gulp-rename');
 var clean = require('gulp-clean');
