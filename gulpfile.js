@@ -25,10 +25,51 @@ gulp.task('styles', function() {
   return gulp.src('assets/scss/style.scss')
     .pipe(sass({ style: 'compressed' }))
     .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
-    .pipe(gulp.dest('assets/css'))
-    .pipe(rename({suffx: '.min'}))
+    .pipe(gulp.dest('build/css'))
+    .pipe(rename({suffix: '.min'}))
     .pipe(minifycss())
     .pipe(livereload(server))
-    .pipe(notify({ message: 'Mission Accomplished!' }));
+    .pipe(notify({ message: 'Mission Styles Accomplished!' }));
 });
 
+/**
+ * JS task
+ */
+gulp.task('scripts', function() {
+  return gulp.src('assets/js/**/*.js')
+    .pipe(jshint('.jshintrc'))
+    .pipe(jshint.reporter('default'))
+    .pipe(concat('main.js'))
+    .pipe(gulp.dest('build/js'))
+    .pipe(rename({suffix: '.min'}))
+    .pipe(uglify())
+    .pipe(gulp.dest('build/js'))
+    .pipe(livereload(server))
+    .pipe(notify({ message: 'Mission JS Accomplished!' }));
+});
+
+/**
+ * Image task
+ */
+gulp.task('images', function() {
+  return gulp.src('assets/img/**/*.{jpg,jpeg,gif,png}')
+    .pipe(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true }))
+    .pipe(gulp.dest('build/img'))
+    .pipe(livereload(server))
+    .pipe(notify({ message: 'Mission Image Accomplished!' }));
+});
+
+/**
+ * Clean task
+ */
+gulp.task('clean', function() {
+  return gulp.src(['build/css', 'build/js', 'build/img'], {read: false})
+    .pipe(clean());
+});
+
+/**
+ * Default task
+ */
+gulp.task('default', ['clean'], function() {
+  gulp.start('styles', 'scripts', 'images');
+});
