@@ -21,3 +21,14 @@ var server = lr();
 /**
  * Styles task
  */
+gulp.task('styles', function() {
+  return gulp.src('assets/scss/style.scss')
+    .pipe(sass({ style: 'compressed' }))
+    .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
+    .pipe(gulp.dest('assets/css'))
+    .pipe(rename({suffx: '.min'}))
+    .pipe(minifycss())
+    .pipe(livereload(server))
+    .pipe(notify({ message: 'Mission Accomplished!' }));
+});
+
