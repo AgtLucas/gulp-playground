@@ -78,7 +78,7 @@ gulp.task('watch', function () {
       return console.warn(err)
     };
 
-    gulp.watch('assets/scss/**/*.scss', ['styles']);
+    gulp.watch('assets/scss/*.scss', ['styles']);
 
     gulp.watch('assets/js/**/*.js', ['scripts']);
 
