@@ -18,6 +18,7 @@
     "gulp-notify": "^1.0.0-beta",
     "gulp-cache": "^0.1.2",
     "gulp-jshint": "^1.4.2",
-    "gulp-imagemin": "^0.1.5"
+    "gulp-imagemin": "^0.1.5",
+    "gulp": "^3.5.2"
   }
 }
