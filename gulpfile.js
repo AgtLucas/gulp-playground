@@ -81,7 +81,7 @@ gulp.task('watch', function() {
 
     gulp.watch('assets/js/**/*.js', ['scripts']);
 
-    gulp.watch('assets/img/**/*.{jpg,jpeg,gif,png}', ['images']);
+    gulp.watch('assets/img/**/*', ['images']);
   })
 });
 
