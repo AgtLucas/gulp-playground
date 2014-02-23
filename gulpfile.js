@@ -30,6 +30,7 @@ gulp.task('styles', function() {
     .pipe(rename({suffix: '.min'}))
     .pipe(minifycss())
     .pipe(livereload(server))
+    .pipe(gulp.dest('build/css'))
     .pipe(notify({ message: 'Mission Styles Accomplished!' }));
 });
 
