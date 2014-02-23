@@ -17,3 +17,7 @@ var cache = require('gulp-cache');
 var livereload = require('gulp-livereload');
 var lr = require('tiny-lr');
 var server = lr();
+
+/**
+ * Styles task
+ */
