@@ -68,6 +68,23 @@ gulp.task('clean', function() {
 });
 
 /**
+ * Watch task
+ */
+gulp.task('watch', function() {
+  server.listen(35729, function(err) {
+    if (err) {
+      retunr console.warn(err)
+    };
+
+    gulp.watch('assets/scss/**/*.{scss,sass}', ['styles']);
+
+    gulp.watch('assets/js/**/*.js', ['scripts']);
+
+    gulp.watch('assets/img/**/*.{jpg,jpeg,gif,png}', ['images']);
+  })
+});
+
+/**
  * Default task
  */
 gulp.task('default', ['clean'], function() {
