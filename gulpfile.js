@@ -75,7 +75,7 @@ gulp.task('clean', function () {
 gulp.task('watch', function () {
   server.listen(35729, function (err) {
     if (err) {
-      return console.warn(err)
+      return console.log(err)
     };
 
     gulp.watch('assets/scss/*.scss', ['styles']);
